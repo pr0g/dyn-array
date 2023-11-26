@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.24)
-project(array LANGUAGES C)
+project(dyn-array LANGUAGES C)
 
 include(FetchContent)
 
 option(ARRAY_ENABLE_TEST "Enable testing" OFF)
 
 add_library(${PROJECT_NAME})
-target_sources(${PROJECT_NAME} PRIVATE array.c)
+target_sources(${PROJECT_NAME} PRIVATE dyn-array.c)
 target_include_directories(
   ${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/>)
 target_compile_features(${PROJECT_NAME} PRIVATE c_std_99)

@@ -1,6 +1,6 @@
 #include <unity.h>
 
-#include "array.h"
+#include "dyn-array.h"
 
 typedef struct elem_t {
   int val_;

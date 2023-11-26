@@ -1,4 +1,4 @@
-#include "array.h"
+#include "dyn-array.h"
 
 #include <stdio.h>
 #include <stdlib.h>
