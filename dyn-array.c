@@ -33,14 +33,14 @@ void* internal_array_resize(void* array, const int count, const int elem_size) {
   return array;
 }
 
-static int max(const int lhs, const int rhs) {
+static int max_int(const int lhs, const int rhs) {
   return lhs > rhs ? lhs : rhs;
 }
 
 void* internal_array_grow(void* array, int elem_size) {
   const int capacity = array_capacity(array);
   if (array_size(array) == capacity) {
-    array = internal_array_reserve(array, max(capacity * 2, 1), elem_size);
+    array = internal_array_reserve(array, max_int(capacity * 2, 1), elem_size);
   }
   ARRAY_SIZE(array) += 1;
   return array;
